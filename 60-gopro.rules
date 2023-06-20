@@ -1,3 +1,7 @@
+# GoPro HERO 8 Black
+SUBSYSTEM=="net", ATTRS{idVendor}=="2672", ATTRS{product}=="HERO8 BLACK", ACTION=="add", RUN+="systemctl start gopro_webcam"
+SUBSYSTEM=="net", ATTRS{idVendor}=="2672", ATTRS{product}=="HERO8 BLACK", ACTION=="remove", RUN+="systemctl stop gopro_webcam"
+
+# GoPro HERO 9
 SUBSYSTEM=="net", ATTRS{idVendor}=="2672", ATTRS{product}=="GoPro HERO9", ACTION=="add", RUN+="systemctl start gopro_webcam"
 SUBSYSTEM=="net", ATTRS{idVendor}=="2672", ATTRS{product}=="GoPro HERO9", ACTION=="remove", RUN+="systemctl stop gopro_webcam"
-
